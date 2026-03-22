@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:#0a0a0f; --panel:#0f0f1a; --border:#1a1a3a;
+  --accent:#00ffcc; --accent2:#ff3366; --accent3:#ffcc00; --accent4:#7b2fff;
+  --text:#c8d0e8; --dim:#5a607a; --code-bg:#080810;
+}
+
+body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono',monospace; overflow-x:hidden; }
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--accent4); }
+
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.07) 2px,rgba(0,0,0,.07) 4px);
+}
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:linear-gradient(rgba(0,255,204,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,204,.025) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+
+@keyframes fadeDown  { from{opacity:0;transform:translateY(-24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeUp    { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn    { from{opacity:0} to{opacity:1} }
+@keyframes slideIn   { from{opacity:0;transform:translateX(-16px)} to{opacity:1;transform:translateX(0)} }
+@keyframes float     { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-6px)} }
+@keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes glow      { 0%,100%{text-shadow:0 0 20px rgba(0,255,204,.5),0 0 40px rgba(0,255,204,.25)} 50%{text-shadow:0 0 35px rgba(0,255,204,.8),0 0 70px rgba(0,255,204,.4)} }
+@keyframes scanPhoto { 0%{top:-100%} 100%{top:200%} }
+
+.logo-text    { animation:glow 3s ease-in-out infinite; }
+.cursor-blink { animation:blink 1s step-end infinite; }
+.float-anim   { animation:float 4s ease-in-out infinite; }
