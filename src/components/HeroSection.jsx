@@ -23,7 +23,7 @@ export default function HeroSection() {
           <CodeLine kw="loot" fn="  status" op="=" str="Open to Work" />
           <CodeLine kw="loot" fn="  location" op="=" str="Addis Ababa, Ethiopia" />
         </div>
-        <div style={{ fontSize: 10, color: C.dim, letterSpacing: 3, marginBottom: 8, fontFamily: "'Press Start 2P',monospace" }}>PLAYER ONE —</div>
+        <div style={{ fontSize: 10, color: C.dim, letterSpacing: 3, marginBottom: 8, fontFamily: "'Press Start 2P',monospace" }}>DEVELOPER ONE —</div>
         <h1 className="logo-text" style={{ fontSize: 'clamp(28px,6vw,58px)', color: C.accent, fontFamily: "'Press Start 2P',monospace", lineHeight: 1.25, marginBottom: 16, letterSpacing: 2 }}>SAMUEL BIRHANU</h1>
         <div style={{ fontFamily: "'Orbitron',sans-serif", fontSize: 'clamp(13px,2.5vw,20px)', color: C.text, marginBottom: 36, minHeight: 32 }}>
           {typed}<span className="cursor-blink" style={{ color: C.accent }}>█</span>
